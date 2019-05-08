@@ -1,0 +1,72 @@
+
+import java.awt.Point;
+public class stackkk {
+	Node top; 
+	  
+    static class Node { 
+        Point data; 
+        Node next; 
+  
+        Node(Point data) { 
+            this.data = data; 
+        } 
+    }
+    
+    public Point pop()  {
+    	RuntimeException es = new RuntimeException();
+    	
+    	
+    	Point q;
+    	if (top==null ) throw es;
+    	else {
+    		 q=top.data;
+    		top=top.next;	
+    	}
+    	return q;
+ 	
+    }
+   
+    public Point peek() {
+    	RuntimeException es = new RuntimeException();
+    	if (top==null) throw es;
+    	else
+    		return top.data;
+    
+    }
+   
+    public void push(Point element) {
+    	Node x=new Node(element);	
+    	x.next=top;
+    	top=x;
+    }
+   
+    public boolean isEmpty() {
+    	Node current=top; int s=0;
+    	while (current!=null) {
+    		s++; current=current.next;
+    	}
+    	return (!(s>0));
+    	
+    }
+    
+    public int size() {
+    	Node current=top; int s=0;
+    	while (current!=null) {
+    		s++; current=current.next;
+    	}
+    	return s;
+    }
+    
+    public void print () {
+    	Node current=top;
+    	while (current!=null) {
+    		System.out.println(current.data);
+    		current=current.next;
+    	}
+    	
+    }
+    
+   
+
+}
+
