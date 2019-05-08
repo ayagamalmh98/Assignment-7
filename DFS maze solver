@@ -111,10 +111,7 @@ public class MAzE {
 				res[i][1] = ch.peek().y;
 				ch.pop();
 			}
-			for (int i = 0; i < 3; i++)
-				System.out.println("fmf");
-			for (int i = 0; i < 3; i++)
-				System.out.println("fmf");
+			
 
 			return res;
 
